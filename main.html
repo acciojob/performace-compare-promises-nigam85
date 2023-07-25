@@ -1,43 +1,33 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-  </head>
+<head>
+  <title>API Fetch Performance</title>
+</head>
+<body>
+  <h2>Promise.all() Results:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>API Status</th>
+        <th>Time Taken</th>
+        <th>Response</th>
+      </tr>
+    </thead>
+    <tbody id="output-all"></tbody>
+  </table>
 
-  <body>
-    <!-- the entire body must be written by student -->
-    <table class="table table-striped table-hover table-bordered">
-      <thead>
-        <tr>
-          <th>Promise Type</th>
-          <th>Time taken (ms)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Promise.all()</td>
-          <td id="output-all"></td>
-        </tr>
+  <h2>Promise.any() Results:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>API Status</th>
+        <th>Time Taken</th>
+        <th>Response</th>
+      </tr>
+    </thead>
+    <tbody id="output-any"></tbody>
+  </table>
 
-        <tr>
-          <td>Promise.any()</td>
-          <td id="output-any"></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <script type="text/javascript" src="./script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
